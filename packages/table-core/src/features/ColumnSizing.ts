@@ -238,7 +238,7 @@ export const ColumnSizing: TableFeature = {
               old.columnSizingStart.forEach(([columnId, headerSize]) => {
                 newColumnSizing[columnId] =
                   Math.round(
-                    Math.max(headerSize + headerSize * deltaPercentage, 0) * 100
+                    Math.max(headerSize + (headerSize * deltaPercentage * -1), 0) * 100
                   ) / 100
               })
 
